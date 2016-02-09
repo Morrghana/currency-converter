@@ -1,4 +1,5 @@
 <?php
+
 function convertCurrency($params)
 {
 	$currencyRates = json_decode(file_get_contents("currencyRates.json"), true);
