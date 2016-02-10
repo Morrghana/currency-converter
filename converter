@@ -7,8 +7,10 @@ require __DIR__.'/libs/functions.php';
 use Symfony\Component\Console\Application;
 use Commands\ConvertCommand;
 use Commands\GetRateCommand;
+use Commands\DownloadRatesCommand;
 
 $application = new Application();
 $application->add(new ConvertCommand());
 $application->add(new GetRateCommand());
+$application->add(new DownloadRatesCommand());
 $application->run();
