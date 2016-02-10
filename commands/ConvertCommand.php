@@ -35,7 +35,11 @@ class ConvertCommand extends Command
     {
         $arguments = $input->getArguments();
         $result = convertCurrency($arguments);
-        $output->writeln($result);
+        if($result === false) {
+            $output->writeln('<error>Unknown currency</error>');
+        } else {
+            $output->writeln('<info>' . $result . '</info>');
+        }
     }
 
 }
