@@ -20,6 +20,6 @@ class DownloadRatesCommand extends Command
     {
         $currencyRatesUpdater = new CurrencyRatesUpdater();
         $result = $currencyRatesUpdater->getRates();
-        $output->writeln("Done!");
+        $output->writeln("<info>Done!</info>");
     }
 }

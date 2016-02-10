@@ -4,7 +4,7 @@ namespace Libs;
 
 class CurrencyRatesUpdater
 {
-    private $latesUrl = 'http://api.fixer.io/latest';
+    private $latestUrl = 'http://api.fixer.io/latest';
     private $baseUrl = 'http://api.fixer.io/latest?base=';
 
     public function getRates()
@@ -39,7 +39,7 @@ class CurrencyRatesUpdater
 
     private function getLatestRates()
     {
-        return  $this->makeCurlRequest($this->latesUrl);
+        return  $this->makeCurlRequest($this->latestUrl);
     }
 
     private function getBaseRates($country)
